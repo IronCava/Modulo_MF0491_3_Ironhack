@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Mascotas</title>
+  <link rel="stylesheet" href="css/styles_practica29.css" />
+</head>
+<body>
+  <header>
+    <div class="home-button">
+      <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+  </div>
+    <h1> Tu tienda de Mascotas</h1>
+    <p>¡Que animal deseas ver!</p>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <label for="animalInput">Nombre del animal:</label>
+      <input type="text" id="animalInput" placeholder="Ej: perro, gato, canario" />
+      <button id="btnMostrar">Enviar</button>
+    </section>
+
+    <section class="tienda">
+      <div id="puertaTienda">
+        <!-- Aquí irá la imagen -->
+      </div>
+      <figcaption id="nombreMascota"></figcaption>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <span id="nombreFooter">---</span> guapo y hermoso</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

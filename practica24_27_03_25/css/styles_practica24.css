@@ -1,0 +1,121 @@
+/* Estilos generales del cuerpo de la página */
+body {
+  background: #e0f0ff; /* Fondo azul claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2a4d69; /* Azul más oscuro para el texto */
+  text-align: center;
+  padding: 40px;
+}
+
+/* Estilo general para todos los botones con efecto neumórfico */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  background: #e0f0ff; /* Mismo color que el fondo para efecto de relieve */
+  color: #2a4d69;
+  box-shadow: 
+    8px 8px 16px #b0cde0,   /* Sombra inferior derecha (oscura) */
+   -8px -8px 16px #ffffff;  /* Sombra superior izquierda (clara) */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efecto de hundido al hacer hover sobre los botones */
+button:hover {
+  box-shadow: 
+    inset 4px 4px 8px #b0cde0, 
+    inset -4px -4px 8px #ffffff;
+}
+
+/* Contenedor principal para los resultados de los dados */
+#resultados {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* Espacio entre los dados */
+  flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
+}
+
+/* Estilo neumórfico para cada contenedor de jugador */
+.jugador {
+  background: #e0f0ff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 
+    10px 10px 20px #b0cde0, 
+   -10px -10px 20px #ffffff;
+  display: inline-block;
+}
+
+/* Estilo para el resultado del ganador */
+#ganador {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Botón "Jugar de nuevo" con separación */
+#reiniciarBtn {
+  margin-top: 15px;
+}
+
+.dado {
+  width: 100px;
+  height: auto;
+}
+/* Animación de giro suave del dado */
+@keyframes girarDado {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
+/* Clase para activar la animación */
+.animar-dado {
+  animation: girarDado 0.6s ease-in-out;
+}
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+  position: fixed;
+  bottom: 880px;
+  right: 120px;
+  width: 160px;
+  height: 160px;
+  background-color: #b0cde08d; /* igual que las secciones */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -6px -6px 20px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.home-button a {
+  color: #2c3e50; /* mismo color de texto del sitio */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.home-button:hover {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+  background-color: #b0cde0; /* ligeramente más oscuro al presionar */
+}

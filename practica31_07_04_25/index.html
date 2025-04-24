@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicios Arrays - Ironhack</title>
+  <link rel="stylesheet" href="css/styles_practica31.css" />
+</head>
+<body>
+  <main>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div>
+    <section>
+      <h1>1. Listado del Zoo a la Inversa</h1>
+      <p>Dado el array <code>["elefante", "jirafa", "león", "cocodrilo", "canguro"]</code>, mostrar los animales desde el último al primero sin usar <code>.reverse()</code>.</p>
+      <button onclick="ejecutarZoo()">Mostrar animales al revés</button>
+      <pre id="salidaZoo"></pre>
+    </section>
+
+    <section>
+      <h1>2. Catálogo de Música (CRUD)</h1>
+      <p>Realiza operaciones como añadir, borrar, modificar o mostrar bandas musicales:</p>
+
+      <div class="botonera">
+        <button onclick="mostrarTodas()">Mostrar todas</button>
+        <button onclick="agregarBanda()">Añadir banda</button>
+        <button onclick="agregarVariasBandas()">Añadir varias bandas</button>
+        <button onclick="borrarPrimera()">Borrar primera</button>
+        <button onclick="borrarUltima()">Borrar última</button>
+        <button onclick="borrarPorIndice()">Borrar por índice</button>
+        <button onclick="modificarBanda()">Modificar una banda</button>
+        <button onclick="buscarBanda()">Buscar banda</button>
+        <button onclick="mostrarUna()">Mostrar banda por índice</button>
+      </div>
+
+      <pre id="salidaBandas"></pre>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

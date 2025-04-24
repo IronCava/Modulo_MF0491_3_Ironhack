@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantantes</title>
+    <link rel="stylesheet" href="css/styles_practica9.css">
+</head>
+
+<body>
+    <header>
+        <h1>Grandes voces de la música española</h1>
+        <nav class="menu" id="menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Serrat</a></li>
+                <li><a href="anabelen.html">Ana Belén</a></li>
+                <li><a href="sabina.html">Sabina</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+        <!-- Ícono de hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776;
+        </div>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div>  
+    </header>
+   
+    <!-- Contenido principal -->
+    <main class="content">
+        <div class="info-container">
+            <article class="bio-content">
+                <h2>Joan Manuel Serrat Teresa</h2>
+                <h3>Barcelona; 27 de diciembre de 1943</h3>
+                <section class="bio">
+                    <h2>Biografía</h2>
+                    <p>
+                        Conocido como Joan Manuel Serrat, es un cantante, compositor, actor,
+                        escritor, poeta y guitarrista español, premiado con la Gran Cruz de
+                        la Orden Civil de Alfonso X el Sabio por su brillante carrera y su
+                        contribución a la cultura y el arte españoles.
+                    </p>
+                </section>
+                <section class="info-contacto">
+                    <p>Web oficial: <a href="https://jmserrat.com/">Enlace</a></p>
+                </section>
+            </article>
+            <aside class="image-container">
+                <img src="img/serrat.jpg" alt="Joan Manuel Serrat" class="imagen-cantante">
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <address>
+            <p>📍 Plaza Cataluña, Barcelona</p>
+            <p>📞 Teléfono: +34 123 456 789</p>
+            <p>📧 Correo: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+        </address>
+    </footer>
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+    
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    
+        // Botón 'Volver'
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+    
+</body>
+
+</html>

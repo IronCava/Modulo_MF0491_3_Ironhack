@@ -1,0 +1,95 @@
+/* styles.css */
+
+body {
+  background-color: #1e1e2f;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #f8ab10;
+}
+
+.enunciado {
+  background-color: #2c2c3e;
+  border-left: 5px solid #69b5cd;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.resultados {
+  background-color: #2c2c3e;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#output {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #1a1a28;
+  border: 1px solid #444;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+code {
+  background-color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #f8ab10;
+}
+
+    /* ================== BOTÓN 'PÁGINA PRINCIPAL' - ESTILO BRUTALISTA ================== */
+.home-button {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 160px;
+    height: 160px;
+    background-color: #f8ab10; 
+    border: 6px solid rgb(255, 255, 255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 6px 6px 0 rgb(255, 255, 255,0.18); 
+    transition: none; 
+    border-radius: 4px;
+
+  }
+  
+  .home-button a {
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+    font-family: "Courier New", monospace; 
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+  }
+  
+  .home-button:hover {
+    background-color: black;
+    border-color: #f8ab10;
+    box-shadow: -6px -6px 0 #f8ab10;
+  }
+  
+  .home-button:hover a {
+    color: white;
+  }
+  
+

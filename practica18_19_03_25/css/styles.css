@@ -1,0 +1,619 @@
+.preloader {
+    position: fixed;
+    /* El preloader se queda fijo sobre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Ocupar el ancho total de la ventana */
+    height: 100vh;
+    /* Ocupar el alto total de la ventana */
+    background-color: #ffffff;
+    /* Fondo oscuro (igual al de la web original) */
+    display: flex;
+    /* Centrado del GIF */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Por encima de todo lo demás */
+    transition: opacity 0.5s ease;
+    /* Suaviza el ocultamiento cuando se esconde */
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ===  Estilos generales === */
+/* Elimina márgenes y relleno por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* === CABECERA SUPERIOR SOBRE SLIDER === */
+.top-header {
+    position: absolute;
+    /* se superpone al slider */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.contact-details {
+    display: flex;
+    gap: 60px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-details .info strong {
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.contactanos-button {
+    border: 2px solid rgb(131, 181, 73);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contactanos-button:hover {
+    background-color: rgb(131, 181, 73);
+    color: white;
+}
+
+/* === SLIDER === */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* uso el alto de la pantalla menos 100px", es decir, dejo espacio para el header. */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    font-size: 60px;
+    font-weight: 700;
+
+
+
+}
+
+.subtitulo {
+    font-weight: bold;
+    color: rgb(130, 181, 71);
+    margin-bottom: 1rem;
+    font-size: 15px;
+
+}
+
+/* Animación para los textos del slider */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        /* Al inicio, el texto es invisible */
+        transform: translateX(5%);
+        /* Se posiciona ligeramente a la derecha (5% hacia la derecha) */
+    }
+
+    100% {
+        opacity: 1;
+        /* Al finalizar, el texto se vuelve visible */
+        transform: translateX(0);
+        /* Termina en su posición original */
+    }
+}
+
+/* Aplica la animación solo al texto (h1 y p) del slide activo */
+.hero-slider .slide.active h1,
+.hero-slider .slide.active p {
+    animation: slideInLeft 1.9s ease forwards;
+    /* 1.9s → duración de la animación
+       ease → tipo de suavidad del movimiento (inicio lento, acelera, y final lento)
+       forwards → mantiene el estado final de la animación (no vuelve a ocultarse) */
+}
+
+.slider-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-color: #ffffff;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-nav .prev {
+    top: 180px;
+    left: 860px;
+}
+
+.slider-nav .next {
+    top: 180px;
+    left: 990px;
+
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-color: #ffffff;
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+/* ===  Estilos generales del nav === */
+nav {
+    background-color: rgb(38, 48, 29);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Lista principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cada item del menú */
+nav ul li {
+    position: relative;
+}
+
+/* Enlaces del menú principal */
+nav ul li a {
+    display: block;
+    padding: 40px 60px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+/* Fondo amarillo al pasar por un enlace */
+nav ul li:hover>a {
+    background-color: #f8ab10;
+    color: rgb(38, 48, 29);
+}
+
+/* Submenú oculto por defecto */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 250px;
+    display: none;
+    z-index: 1000;
+    padding: 0;
+}
+
+/* Mostrar submenú al hacer hover en el padre */
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Submenú: cada ítem */
+nav ul li ul li {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Submenú: enlaces */
+nav ul li ul li a {
+    color: #0f2b1d;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Hover en los submenús */
+nav ul li ul li:hover a {
+    background-color: #e0e0e0;
+    color: #043756;
+}
+
+/* Estilo para la pestaña activa */
+nav ul li a.active {
+    background-color: #f8ab10;
+    color: #fdfdfd;
+}
+
+/* === SECCIÓN ABOUT === */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Para que todas las columnas tengan la misma altura */
+    padding: 80px 250px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-col {
+    flex: 1;
+}
+
+.columna-1 h2 {
+    font-size: 88px;
+    font-weight: 700;
+    color: #005a87;
+}
+
+.columna-1 h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #005a87;
+    margin-bottom: 80px;
+}
+
+.about-button {
+    padding: 20px 55px;
+    border: 2px solid rgb(131, 181, 73);
+    border-radius: 25px;
+    color: rgb(131, 181, 73);
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 40px;
+}
+
+.about-button:hover {
+    background-color: rgb(131, 181, 73);
+    color: white;
+}
+
+/* COLUMNA 2 (texto centrado verticalmente) */
+.columna-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.columna-2 p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.columna-2 p:first-child {
+    color: #005a87;
+    font-weight: 600;
+}
+
+.columna-2 p:not(:first-child) {
+    color: #aca9a9;
+    /* Gris */
+}
+
+.columna-2 strong {
+    color: rgb(144, 140, 140);
+}
+
+/* COLUMNA 3 (imagen + texto centrado) */
+.columna-3 {
+    text-align: center;
+}
+
+.columna-3 img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+.columna-3 p {
+    font-size: 28px;
+    font-weight: 600;
+    color: #005a87;
+    margin-bottom: 40px;
+}
+
+/* === SECCIÓN VALUES (con parallax) === */
+.values {
+    position: relative;
+    /* Necesario para posicionar el ::before */
+    background-image: url("../img/imagen-10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 80px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+}
+
+.values::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 55, 77, 0.6);
+    /* Azul oscuro con opacidad */
+    z-index: 0;
+    /* Detrás del contenido */
+}
+
+.value-item {
+    flex: 1;
+    max-width: 350px;
+    position: relative;
+    /* Para que se vea por encima del ::before */
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+/* Clase que se añade cuando el elemento está visible animacion texto*/
+.value-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.value-item h3 {
+    font-size: 24px;
+    color: #f8ab10;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.value-item p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* === SECCIÓN SERVICIOS === */
+.services {
+    background-image: url("../img/services-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 100px 40px;
+  }
+  
+  .services h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  
+  /* Grid de servicios */
+  .service-grid {
+    display: flex;
+    flex-wrap: wrap;              /* Permite que pasen a nueva línea */
+    justify-content: center;      /* Centra horizontalmente */
+    gap: 50px 80px;               /* Espacio entre filas y columnas */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Cada bloque de servicio */
+  .service-item {
+    width: 18%;                   /* 4 por fila aprox */
+    min-width: 220px;
+    text-align: center;
+  }
+  
+  /* Íconos */
+  .service-item i {
+    font-size: 36px;
+    color: #8ddc57;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  
+  /* Títulos */
+  .service-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Párrafos */
+  .service-item p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* Animación base */
+.service-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+  }
+  
+  /* Cuando se vuelve visible */
+  .service-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/* === SECCIÓN: Últimos proyectos === */
+.ultimos_proyectos {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  .ultimos_proyectos h2 {
+    font-size: 36px;
+    color: rgb(15,55,77);
+    margin-bottom: 40px;
+    padding: 80px 40px;
+
+  }
+  
+  /* Menú de filtros */
+  .project-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .project-menu a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(15,55,77);
+    transition: color 0.3s;
+  }
+  
+  .project-menu a.selected,
+  .project-menu a:hover {
+    color: #f8ab10;
+  }
+  
+  /* Galería de proyectos */
+  .project-gallery {
+    display: flex;
+    flex-wrap: nowrap;            /* Mantiene todas las imágenes en una sola fila */
+    gap: 0;                       /* Elimina espacio entre imágenes */
+  }
+  
+  .project-item {
+    flex: 0 0 auto;               /* No se encoge, no crece, mantiene tamaño fijo */
+    width: 200px;                 /* Ancho uniforme */
+    height: 200px;                /* Alto uniforme */
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           /* Recorta imagen para cubrir toda la caja */
+    display: block;
+  }
+  
+  
+  /* Animación para aparición suave */
+  .project-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-item {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+
+  /* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+.home-button {
+    position: fixed;
+    bottom: 620px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #494f91;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}

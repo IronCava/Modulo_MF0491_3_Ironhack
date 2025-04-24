@@ -1,0 +1,175 @@
+/* FUENTE GROSERA TIPO BRUTALISTA */
+body {
+  margin: 0;
+  font-family: 'Arial Black', sans-serif;
+  background-color: #000; /* Negro como base brutalista */
+  color: #fff;
+}
+
+/* HERO CON FONDO PLATEADO + TEXTO CENTRADO */
+.hero {
+  background-image: url('../img/paul_portada.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 8px solid #ccc;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* capa oscura encima */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.3);
+  padding: 30px;
+  border: 3px solid #c0c0c0;
+  border-radius: 0;
+  color: #f1f1f1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #aaa;
+  display: inline-block;
+}
+
+/* BOTÓN ESTILO DURO / CUADRADO */
+button {
+  background-color: #c0c0c0;
+  border: 3px solid #000;
+  color: #000;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #fff;
+  border-color: #222;
+}
+
+/* MODAL PLATEADO */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  background: #d3d3d3;
+  margin: 8% auto;
+  padding: 30px;
+  border: 5px double #999;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  color: #111;
+  font-family: 'Courier New', monospace;
+}
+
+.modal-content h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.modal-content img {
+  margin-top: 20px;
+  border: 2px solid #333;
+}
+
+/* BOTÓN CIERRE */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+.mensaje-final {
+  background-color: #000;
+  color: #0ff;
+  font-size: 1.1rem;
+  padding: 15px;
+  margin-top: 30px;
+  border: 3px double #0ff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+}
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' - ESTILO BRUTALISTA ================== */
+.home-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #c0c0c0, #eeeeee, #aaa, #fff, #b0b0b0);
+  border: 6px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 6px 6px 0 #fff;
+  transition: all 0.3s ease;
+  background-size: 200% 200%;
+  animation: brilloMetalico 5s infinite linear;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+
+}
+
+
+.home-button a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "Courier New", monospace; 
+  text-transform: uppercase;
+  display: block;
+  padding: 10px;
+}
+
+.home-button:hover {
+  background-color: black;
+  border-color: rgb(204, 36, 20);
+  box-shadow: -6px -6px 0 rgb(116, 12, 2);
+}
+
+.home-button:hover a {
+  color: rgb(116, 12, 2)
+}
+@keyframes brilloMetalico {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

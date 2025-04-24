@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ============================= */
+/* VARIABLES CSS (Mejora escalabilidad) */
+/* ============================= */
+:root {
+    --font-primary: 'Pacifico', cursive;
+    --font-secondary: monospace;
+
+    --color-bg: #2B2F3A;
+    --color-bg-gradient: #0D0E12;
+    --color-background-color: #5874c0;
+    --color-highlight: #E88735;
+    --color-title-shadow: #e78d0f;
+    --color-overlay: rgba(0, 0, 0, 0.8);
+    --color-white: #fff;
+    --color-logo-shadow: rgba(0, 0, 0, 0.5);
+
+    --spacing-lg: 30px;
+    --spacing-md: 20px;
+    --spacing-sm: 10px;
+
+    --animation-speed: 0.5s;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES */
+/* ============================= */
+body {
+    margin: 0;
+    font-family: var(--font-secondary);
+}
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+.logo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    width: 200px;
+    height: 200px;
+    animation: pulse 3s infinite;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: var(--spacing-sm);
+    box-shadow: 0 0 15px var(--color-logo-shadow);
+}
+
+/* ============================= */
+/* SLIDER */
+/* ============================= */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--color-bg), var(--color-bg-gradient));
+    overflow: hidden;
+}
+
+.slider::before {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: var(--color-background-color);
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+.title {
+    position: absolute;
+    top: 0%;
+    right: 60%;
+    text-align: right;
+    color: var(--color-white);
+    font-size: 150px;
+    width: 40%;
+    font-family: var(--font-primary);
+    text-shadow: 3px 5px 0px var(--color-title-shadow);
+    line-height: 0.9em;
+    transform: rotate(-5deg);
+}
+
+/* ============================= */
+/* IMÁGENES */
+/* ============================= */
+.images {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    --rotate: 0deg;
+    transform: translate(-50%, 50%) rotate(var(--rotate));
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    transition: transform var(--animation-speed) ease-in-out;
+    outline: 1px dashed #fff5;
+    outline-offset: -100px;
+}
+
+.images .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    rotate: calc(360deg / 13 * (var(--i) - 1));
+}
+
+.images .item img {
+    max-height: 220px;
+    width: auto;
+}
+
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    text-align: justify;
+    width: 850px;
+}
+
+.content .item {
+    background-color: var(--color-overlay);
+    padding: var(--spacing-md);
+    border-radius: 15px;
+    display: none;
+}
+
+.content .item.active {
+    display: block;
+}
+
+.content h3 {
+    color: var(--color-highlight);
+    font-size: xxx-large;
+}
+
+.content button {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 20px;
+    background-color: var(--color-highlight);
+    color: var(--color-white);
+    border: none;
+    float: right;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #d6752f;
+}
+
+/* ============================= */
+/* ANIMACIÓN DE CONTENIDO */
+/* ============================= */
+.content .item.active h1,
+.content .item.active .des,
+.content .item.active button {
+    opacity: 0;
+    animation: showContent var(--animation-speed) ease-in-out 1 forwards;
+}
+
+/* ============================= */
+/* BOTONES DE NAVEGACIÓN */
+/* ============================= */
+#prev,
+#next {
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 80px;
+    font-size: 150px;
+    font-family: cursive;
+    background-color: transparent;
+    color: var(--color-white);
+    font-weight: bold;
+    opacity: 0.5;
+    /* Se ven ligeramente al inicio */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#next {
+    left: unset;
+    right: 80px;
+}
+
+#next:hover,
+#prev:hover {
+    opacity: 1;
+}

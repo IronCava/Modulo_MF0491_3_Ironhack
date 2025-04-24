@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/styles_practica2.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Sobre mi</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="inicio_sesion.html">Inicio Sesión</a></li>
+                </ul>
+            </nav>
+            <div class="home-button">
+                <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+            </div>           
+        </header>
+    <main class="container">
+        <h1>Bienvenido a mi porfolio</h1>
+        <p>Desarrolladora web con experiencia en la creación, maquetación y mantenimiento de sitios web, con
+            especialización en ecommerce y optimización UX/UI. Capacidad para trabajar tanto de manera freelance
+            como en
+            equipos de desarrollo. Dominio de HTML, CSS, JavaScript y CMS como PrestaShop y WordPress. Conocimientos
+            en
+            SEO técnico, bases de datos, backend con Node.js y Express.js, e integración de pagos con Stripe.
+            Apasionada
+            por la optimización del rendimiento web y el diseño responsivo.</p>
+
+        <!-- Imagen añadida -->
+        <figure class="imagen-inicio">
+            <img src="img/inicio.jpg" alt="Imagen de ServiWeb">
+            <figcaption>Conoce nuestros servicios de calidad.</figcaption>
+
+        </figure>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>📍 Plaza Cataluña, Barcelona</p>
+            <p>📞 Teléfono: +34 123 456 789</p>
+            <p>📧 Correo: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+        </div>
+    </footer>
+    </div>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+     <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

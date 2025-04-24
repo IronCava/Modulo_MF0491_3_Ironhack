@@ -1,0 +1,103 @@
+body {
+  background-color: #8f9eaf;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2c3e50;
+}
+
+h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #f0e6e6;
+  margin-bottom: 40px;
+}
+section {
+  background-color: #dbe4ec; /* Fondo claro para permitir contraste con las sombras */
+  border-radius: 30px;       
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 600px;
+  width: 90%;
+
+  /* 🔽 Aquí empieza el efecto neumorfismo hundido (sombra interna) */
+  box-shadow:
+    inset -10px -10px 25px rgba(255, 255, 255, 0.7),  /* Luz desde arriba-izquierda: eje X   eje Y  difuminado  color + opacidad*/
+    inset 10px 10px 25px rgba(0, 0, 0, 0.15);         /* Sombra desde abajo-derecha */
+  /* Esto genera la ilusión de que el contenedor está empotrado o hundido */
+  
+  transition: box-shadow 0.3s ease; /* Suaviza el cambio al hacer hover */
+}
+
+section:hover {
+  /* 🔁 Sombra más sutil al pasar el ratón, simula una ligera variación de profundidad */
+  box-shadow:
+    inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+input, select, button {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #dbe4ec; /* Igual que el fondo de la sección para continuidad */
+  color: #2c3e50;
+
+  /* 💡 Aquí se aplica el efecto neumorfismo en relieve (sombra externa) */
+  box-shadow: 
+    4px 4px 8px rgba(0,0,0,0.15),         /* Sombra oscura abajo-derecha */
+    -4px -4px 8px rgba(255,255,255,0.7);  /* Luz clara arriba-izquierda */
+  /* Esta combinación da la sensación de que el botón o input está "salido", como flotando */
+
+  transition: all 0.2s ease;
+  margin: 5px;
+}
+
+input:focus, select:focus, button:hover {
+  outline: none;
+
+  /* 🌀 Al hacer focus o hover, se invierte el efecto y parece que el botón se presiona */
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.2),       /* Sombra interna oscura */
+    inset -2px -2px 5px rgba(255, 255, 255, 0.7); /* Luz interna clara */
+  background-color: #d4dde8; /* Ligeramente más oscuro al presionar */
+}
+
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+  position: fixed;
+  bottom: 620px;
+  right: 120px;
+  width: 160px;
+  height: 160px;
+  background-color: #dbe4ec; /* igual que las secciones */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -6px -6px 20px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.home-button a {
+  color: #2c3e50; /* mismo color de texto del sitio */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.home-button:hover {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+  background-color: #d4dde8; /* ligeramente más oscuro al presionar */
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles_practica12.css">
+  <title>Game Boy con CSS</title>
+</head>
+<body>
+  <div class="container">
+    <div class="home-button">
+      <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+  </div> 
+    <div class="gameboy">
+      <!-- Logo / Título -->
+      <div class="logo">BOMB BOY</div>
+      <!-- Pantalla blanca con efecto reflectivo -->
+      <div class="screen">
+        <!-- Marcador (score) -->
+        <div class="score">SCORE: 000</div>
+        <!-- Grid de bombas -->
+        <div class="grid-container">
+          <div class="bomb explosive foto1"></div>
+          <div class="bomb explosive foto2"></div>
+          <div class="bomb explosive foto3"></div>
+          <div class="bomb explosive foto4"></div>
+          <div class="bomb safe foto5"></div>
+          <div class="bomb explosive foto6"></div>
+          <div class="bomb explosive foto7"></div>
+          <div class="bomb explosive foto8"></div>
+          <div class="bomb explosive foto9"></div>
+        </div>
+      </div>
+      <!-- Botones 3D para controles -->
+      <div class="button-container">
+        <button class="button-3d">
+          <div class="button-top">❮</div>
+          <div class="button-bottom"></div>
+          <div class="button-base"></div>
+        </button>
+        <button class="button-3d">
+          <div class="button-top">❯</div>
+          <div class="button-bottom"></div>
+          <div class="button-base"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('volver').addEventListener('click', function (e) {
+        e.preventDefault();
+        const semana = localStorage.getItem('semanaActiva') || 0;
+        window.location.href = `../index.html`;
+    });
+</script>
+</body>
+</html>

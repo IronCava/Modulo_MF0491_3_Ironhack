@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Adivina el número</title>
+
+  <!-- Enlace al archivo CSS externo -->
+  <link rel="stylesheet" href="css/styles_practica24.css">
+</head>
+<body>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div>
+  <!-- EJERCICIO 1: Adivina el número -->
+  <h1>Ejercicio 1: Adivina el número</h1>
+  <p>Se genera un número aleatorio del 1 al 10. Intenta adivinarlo.</p>
+  <button id="comprobarBtn">Comprobar</button>
+
+  <hr><hr>
+
+  <!-- EJERCICIO 2: Lanzar los dados -->
+  <h1>Ejercicio 2: Lanzar los dados</h1>
+  <p>PLAYER 1 y PLAYER 2 tiran sus dados. El que saque el número más alto gana.</p>
+
+  <!-- Botones para lanzar los dados -->
+  <button id="player1Btn">Tirar PLAYER 1</button>
+  <button id="player2Btn" disabled>Tirar PLAYER 2</button>
+
+  <!-- Contenedor de resultados de cada jugador -->
+  <div id="resultados">
+    <!-- Jugador 1 -->
+    <div class="jugador" id="jugador1">
+      <h2>PLAYER 1</h2>
+      <img id="imagenDado1" src="img/1.png" alt="Dado jugador 1" class="dado">
+    </div>
+
+    <!-- Jugador 2 -->
+    <div class="jugador" id="jugador2">
+      <h2>PLAYER 2</h2>
+      <img id="imagenDado2" src="img/1.png" alt="Dado jugador 2" class="dado">
+    </div>
+
+    <!-- Resultado final -->
+    <p id="ganador"></p>
+  </div>
+
+  <!-- Botón para reiniciar el juego -->
+  <button id="reiniciarBtn" style="display:none;">🔄 Jugar de nuevo</button>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>

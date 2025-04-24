@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Estructura de una web</title>
+</head>
+
+
+<body>
+    <header>
+
+        <h1>Estructura de una web </h1>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div> 
+    </header>
+
+    <div class=" grid-container">
+        <div class="rojo1">1 rojo </div>
+        <div class="verde2 ">2 verde </div>
+        <div class="azul3">3 azul </div>
+        <div class="amarillo4">4 amarillo </div>
+        <div class="negro5">5 negro </div>
+        <div class="rojo6">6 rojo </div>
+        <div class="azul7">7 azul </div>
+    </div>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Casandra Cava López</title>
+    <link rel="stylesheet" href="CSS/styles_practica8.css">
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <h1>Casandra Cava López</h1>
+            <h2>En continuo aprendizaje</h2>
+            <div class="home-button">
+                <a href="../index.html" aria-label="Volver a la página principal">Página principal</a>
+            </div> 
+        </div>
+    </header>
+
+    <main>
+        <section class="acerca-de-mi">
+            <div class="contenido">
+                <img src="img/cas.png" alt="Foto de Casandra Cava López">
+                <div class="texto">
+                    <h3>Acerca de mí</h3>
+                    <p>Soy una persona luchadora y creativa por naturaleza. He estado trabajando desde que tenía 17
+                        años. He
+                        pasado por diferentes puestos para pagar mi formación, desde dependienta a camarera, pasando por
+                        monitora, teleoperadora y otros oficios. He aprendido y crecido en cada uno de los trabajos
+                        realizados.
+                        En estos últimos años me he desempeñado en desarrollo web, diseño, administración y ventas. Soy
+                        una
+                        mujer muy activa física e intelectualmente. Me encanta practicar deporte, voy a todos los sitios
+                        en mis
+                        patines roller. También me gusta la bicicleta; tengo una Mondraker y cuando viene el buen tiempo
+                        salgo a
+                        hacer descenso. Me gusta pintar al óleo y acuarela; en mis ratos libres, que son pocos, mezclo
+                        música en
+                        mi mesa Pioneer y también hago pendientes con materiales reciclados que me encuentro en la
+                        playa.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <h3>Mis hobbies principales</h3>
+        <section class="hobbies-principales">
+            <div class="card">
+                <div class="cardpic bici"></div>
+                <div class="cardinfo">
+                    <h5>Descenso</h5>
+                    <p><a href="img/bici.png">Bicicleta de descenso</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardpic patinar "></div>
+                <div class="cardinfo">
+                    <h5>Patinar</h5>
+                    <p><a href="img/patinar.png">Patinar en roller</a> </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardpic aprender"></div>
+                <div class="cardinfo">
+                    <h5>Aprender</h5>
+                    <p><a href="img/aprender.png">Aprender cosas nuevas</a> </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardpic viajar"></div>
+                <div class="cardinfo">
+                    <h5>Viajar</h5>
+                    <p><a href="img/viajar.png">Conocer sitios nuevos</a> </p>
+                </div>
+            </div>
+        </section>
+        <section class="otros-hobbies">
+            <h3>Otros hobbies</h3>
+            <div class="otros-container">
+                <div class="hobby"><img src="img/pioneer.png" alt="Mezclar musica">
+                    <p>Mezclar música en mi mesa Pioneer</p>
+                </div>
+                <div class="hobby"><img src="img/pintar.png" alt="Pintar al oleo">
+                    <p>Pintar al óleo y acuarela</p>
+                </div>
+                <div class="hobby"><img src="img/joyeria.png" alt="Hacer bisutería reciclada">
+                    <p>Hacer bisutería con materiales reciclados de la playa</p>
+                </div>
+                <div class="hobby"><img src="img/cocinar.png" alt="Cocinar">
+                    <p>Cocinar</p>
+                </div>
+                <div class="hobby"><img src="img/leer.png" alt="Leer">
+                    <p>Leer</p>
+                </div>
+                <div class="hobby"><img src="img/gym.png" alt="Gym">
+                    <p>Gym</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Casandra Cava López. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

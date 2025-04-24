@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles_practica14.css">
+
+    <title>De cuadrado a círculo</title>
+</head>
+
+<body>
+    <h1>De Cuadrado a Círculo</h1>
+    <div class="shape"></div>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div> 
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

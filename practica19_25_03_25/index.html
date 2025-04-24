@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini ejercicios condicionales</title>
+    <link rel="stylesheet" href="css/styles_practica19.css" />
+</head>
+
+<body>
+
+    <body>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div>
+        <h1>Mini ejercicios con condicionales</h1>
+
+        <section>
+            <h2>1. Entrada Discoteca</h2>
+            <input type="number" id="edad" placeholder="Introduce tu edad">
+            <button onclick="verificarEdad()">Verificar</button>
+            <p id="resultadoEdad"></p>
+        </section>
+
+        <section>
+            <h2>2. Cinco Colores</h2>
+            <input type="text" id="color" placeholder="Escribe un color">
+            <button onclick="verificarColor()">Enviar</button>
+            <p id="resultadoColor"></p>
+        </section>
+
+        <section>
+            <h2>3. Lampara no encendida</h2>
+            <p>¿Esta enchufada?</p>
+            <select id="enchufada">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <p>¿Esta la bombilla fundida?</p>
+            <select id="bombilla">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <button onclick="verificarLampara()">Verificar</button>
+            <p id="resultadoLampara"></p>
+        </section>
+
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

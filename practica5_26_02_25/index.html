@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Anidada - Ironhack</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Ejercicio Listas Anidadas</h1>
+</header>
+
+<nav aria-label="Menú principal">
+    <ul>
+        <li><a href="#">Listas anidadas</a></li>
+    </ul>
+</nav>
+<div class="home-button">
+    <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+</div> 
+<main>
+    <section>
+        <h2>Lista Anidada</h2>
+        <ul>
+            <li>Frontend
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </li>
+            <li>Backend
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Base de Datos
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Herramientas
+                <ul>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>Postman</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Ironhack - Todos los derechos reservados</p>
+</footer>
+<script>
+    document.getElementById('volver').addEventListener('click', function (e) {
+        e.preventDefault();
+        const semana = localStorage.getItem('semanaActiva') || 0;
+        window.location.href = `../index.html`;
+    });
+</script>
+</body>
+</html>

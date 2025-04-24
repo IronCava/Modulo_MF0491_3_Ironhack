@@ -1,0 +1,102 @@
+body {
+  background: linear-gradient(135deg, #f1f1f1, #d3d3d3);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #043756;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlide 1s ease forwards;
+}
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shape {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #69b5cd, #043756);
+  border-radius: 0;
+  transition: 
+    border-radius 0.6s ease,
+    background 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: popIn 1s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.shape:hover {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f8ab10, #f1fafe);
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* ============================= BOTÓN 'PÁGINA PRINCIPAL' ============================= */
+.home-button {
+  position: fixed;
+  /* Fijo en la pantalla */
+  top: 20px;
+  /* Posición en la parte superior */
+  right: 20px;
+  /* Alineado a la derecha */
+  width: 160px;
+  height: 160px;
+  background-color: #494f91;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+  /* Asegura que esté por encima de otros elementos */
+}
+
+
+.home-button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+}

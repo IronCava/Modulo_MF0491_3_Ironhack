@@ -1,0 +1,206 @@
+/* === ESTRUCTURA PRINCIPAL === */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* === HEADER y FOOTER === */
+.header,
+.footer {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* === SIDEBAR y CONTENIDO PRINCIPAL === */
+.sidebar,
+.article {
+    background-color: #e9ecef;
+    padding: 20px;
+    min-height: 300px;
+}
+
+/* === BOTONES PERSONALIZADOS === */
+.btn-primary {
+    background-color: #393235;
+    border-color: #393235;
+}
+
+.btn-primary:hover {
+    background-color: #c2185b;
+}
+
+.btn-success {
+    background-color: #6e6f6f;
+    border-color: #6e6f6f;
+}
+
+.btn-success:hover {
+    background-color: #17a589;
+}
+
+/* === TARJETAS PERSONALIZADAS FLIP 3D === */
+.wrapper {
+    perspective: 1500px;
+}
+
+.flip-card {
+    width: 100%;
+    max-width: 320px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+
+.back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Imagen de fondo en front */
+.front-page {
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-info {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: #eff6f8;
+    
+}
+
+/* Parte trasera */
+.back-page {
+    background-color: #1e272e;
+    color: #fff;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+   
+  }
+  
+
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    background-color: #a4a9ab;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: transparent;
+    color: #bcbdbd;
+    border: 1px solid  #bcbdbd;
+}
+
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+.home-button {
+    position: fixed;
+    bottom: 620px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #494f91;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .resultado {                      
+    white-space: normal;            /* Permite saltos de línea en el texto */
+    word-wrap: break-word;          /* Rompe palabras largas si no caben */
+    display: inline-block;          /* Se comporta como bloque pero se adapta al contenido */
+    max-width: 100%;                
+    padding: 10px;                  
+    border: 1px solid #ccc;         
+    background-color: #0b0b0b;     
+    margin-top: 10px;               
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  pre {
+    background: #0a0a0a;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    margin-top: 10px;
+    color: #f2f2f2;
+  }
+
+ /* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+    position: fixed;
+    bottom: 820px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #eee7e7; /* igual que las secciones */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      12px 12px 24px rgba(0, 0, 0, 0.15),
+      -6px -6px 20px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button a {
+    color: #111112; /* mismo color de texto del sitio */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .home-button:hover {
+    box-shadow:
+      inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+      inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+    background-color: #dbe0ec; ; /* ligeramente más oscuro al presionar */
+  }
+   

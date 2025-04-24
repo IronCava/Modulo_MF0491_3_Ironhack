@@ -1,0 +1,282 @@
+/* Definimos variables CSS globales en :root para un mantenimiento más fácil */
+:root {
+    --font-family: Arial, sans-serif;
+    /* Fuente principal de la web */
+    --background-color: #f4f4f4;
+    /* Color de fondo general */
+    --text-color: #333;
+    /* Color del texto estándar */
+    --container-bg: rgba(226, 226, 226, 0.9);
+    /* Fondo del contenedor con opacidad */
+    --menu-bg: #222;
+    /* Color de fondo del menú */
+    --menu-hover-bg: #444;
+    /* Color de fondo cuando el usuario pasa el mouse */
+    --menu-active-bg: #555;
+    /* Color de fondo para el enlace activo */
+    --link-color: #515860;
+    /* Color de los enlaces */
+    --link-hover-bg: #515860;
+    /* Color de fondo cuando el usuario pasa el mouse sobre los enlaces */
+    --heading-color: #222;
+    /* Color de los encabezados */
+    --subheading-color: #666;
+    /* Color para subtítulos */
+    --font-size-normal: 1rem;
+    /* Tamaño de fuente estándar */
+    --font-size-large: 2rem;
+    /* Tamaño de fuente para títulos */
+    --font-size-medium: 1.2rem;
+    /* Tamaño de fuente para subtítulos */
+    --border-radius: 0px;
+    /* Redondeado de bordes para cajas y botones */
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera para efecto elevado */
+    /* Variables para la sección .bio */
+    --bio-bg-image: url('../img/fondo_trayectoria copia.jpg');
+    /* Imagen de fondo */
+    --bio-bg-gradient: linear-gradient(rgba(244, 235, 235, 0.2), rgba(230, 220, 220, 0.4));
+    /* Degradado */
+    --bio-text-color: rgb(9, 9, 9);
+    /* Color del texto */
+    --bio-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+}
+
+/* ============================= ESTILOS GENERALES ============================= */
+body {
+    font-family: var(--font-family);
+    /* Usamos la fuente definida en la variable */
+    margin: 0;
+    padding: 0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    /* Imagen de fondo */
+    background-size: cover;
+    /* La imagen cubre toda la pantalla */
+    color: var(--text-color);
+    /* Color del texto */
+    text-align: center;
+    /* Centra todo el contenido */
+}
+
+.container {
+    max-width: 900px;
+    /* Limita el ancho para mejorar la lectura */
+    margin: 80px auto 0 auto;
+    /* Deja margen superior para no tapar el contenido con el menú */
+    padding: 20px;
+    /* Espaciado interno */
+    background-color: var(--container-bg);
+    /* Color de fondo con transparencia */
+    box-shadow: var(--box-shadow);
+    /* Aplica sombra */
+    border-radius: var(--border-radius);
+    /* Bordes redondeados */
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--link-color);
+    margin: 10px;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+a:hover {
+    background-color: var(--link-hover-bg);
+    /* Cambia el color de fondo al pasar el mouse */
+    color: white;
+    /* Cambia el color del texto a blanco */
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    /* Usa la variable de tamaño grande */
+    color: var(--heading-color);
+    /* Color de título */
+    margin-bottom: 10px;
+    /* Espaciado inferior */
+    padding: 50px;
+    /* Espaciado extra alrededor */
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+    /* Usa el tamaño de subtítulo */
+    color: var(--subheading-color);
+    /* Usa el color de subtítulo */
+}
+
+p {
+    font-size: var(--font-size-normal);
+    /* Tamaño estándar del texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+}
+
+.imagen-cantante {
+    width: 400px;
+    height: 400px;
+    object-fit:scale-down;
+    border-radius: var(--border-radius);
+    box-shadow: var(--bio-box-shadow);
+}
+
+/* ============================= NAVEGACIÓN  ============================= */
+.menu {
+    display: flex;
+    /* Alinea los elementos en fila */
+    justify-content: center;
+    /* Centra los enlaces */
+    align-items: center;
+    /* Alinea verticalmente */
+    gap: 30px;
+    /* Espaciado entre los elementos */
+    padding: 15px 0;
+    /* Espaciado interno */
+    background-color: var(--menu-bg);
+    /* Usa el color de fondo del menú */
+    width: 100%;
+    /* Ocupa todo el ancho de la pantalla */
+    position: fixed;
+    /* Fija el menú en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Mantiene el menú encima del contenido */
+}
+
+/* Asegura que la lista del menu esté alineada horizontalmente */
+.menu ul {
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Alinea los elementos en una fila */
+    justify-content: center;
+    /* Centra el contenido */
+    align-items: center;
+    /* Alinea verticalmente */
+    gap: 30px;
+    /* Mantiene el espaciado entre los elementos */
+}
+
+/* Hace que cada ítem de la lista respete la alineación */
+.menu li {
+    display: inline-block;
+    /* Permite que los elementos se alineen en línea */
+}
+
+/* Enlaces del menú */
+.menu a {
+    text-decoration: none;
+    /* Sin subrayado */
+    font-weight: bold;
+    /* Negrita */
+    color: white;
+    /* Texto blanco */
+    font-size: var(--font-size-normal);
+    /* Usa el tamaño de texto normal */
+    text-transform: capitalize;
+    /* Primera letra en mayúscula */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    padding: 10px 15px;
+    /* Espaciado interno */
+    transition: all 0.5s ease-in-out;
+    /* Animación suave */
+}
+
+/* Enlace activo */
+.menu a.active {
+    background-color: var(--menu-active-bg);
+    /* Color de fondo del enlace activo */
+    color: white;
+    /* Mantiene el color del texto */
+    border-radius: var(--border-radius);
+    /* Aplica bordes redondeados */
+    padding: 10px 20px;
+    /* Ajusta el tamaño del botón */
+}
+
+/* Hover del menú */
+.menu a:hover {
+    background-color: var(--menu-hover-bg);
+    /* Cambia el color de fondo al pasar el mouse */
+    border-radius: var(--border-radius);
+    /* Aplica bordes redondeados */
+    padding: 10px 20px;
+    /* Mantiene el tamaño */
+}
+
+
+
+
+
+.bio {
+    background: var(--bio-bg-gradient), var(--bio-bg-image) no-repeat center center;
+    background-size: cover;
+    /* Ajusta la imagen */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: var(--border-radius);
+    /* Usa la variable de bordes redondeados */
+    color: var(--bio-text-color);
+    /* Color del texto */
+    font-weight: bold;
+    /* Resalta el texto */
+    box-shadow: var(--bio-box-shadow);
+    /* Usa la variable de sombra */
+}
+
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+    position: fixed;
+    bottom: 500px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #494f91; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Efecto hover para mejor interacción */
+}
+
+/* ================== FOOTER ================== */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 40px;
+
+
+}
+footer a {
+   color: #45a049;
+   
+}
+

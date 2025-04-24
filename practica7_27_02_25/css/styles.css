@@ -1,0 +1,89 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 17px;
+    grid-row-gap: 17px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f2ff; 
+}
+/*---------------------------estilos cajas-------------------------------- */
+.rojo1 {
+    grid-area: 1 / 2 / 3 / 10;
+    background: red;
+    border: 5px solid rgb(11, 11, 11); 
+}
+
+.verde2 {
+    grid-area: 3 / 8 / 6 / 10;
+    background: green;
+    border: 5px solid rgb(11, 11, 11); 
+
+}
+
+.azul3 {
+    grid-area: 3 / 4 / 4 / 7;
+    background: blue;
+    border: 5px solid rgb(11, 11, 11); 
+}
+
+.amarillo4 {
+    grid-area: 3 / 2 / 5 / 4;
+    background: yellow;
+    border: 5px solid rgb(11, 11, 11); 
+}
+
+.negro5 {
+    grid-area: 4 / 6 / 6 / 8;
+    background: black;
+    border: 5px solid rgb(11, 11, 11); 
+}
+
+.rojo6 {
+    grid-area: 5 / 3 / 6 / 6;
+    background: red;
+    border: 5px solid rgb(11, 11, 11); 
+
+}
+
+.azul7 {
+    grid-area: 6 / 2 / 7 / 10;
+    background: blue;
+    border: 5px solid rgb(11, 11, 11); 
+    
+}
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+    position: fixed;
+    bottom: 170px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #494f91; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Efecto hover para mejor interacción */
+}

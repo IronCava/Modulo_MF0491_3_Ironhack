@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pelotas Rebotando</title>
+    <link rel="stylesheet" href="css/styles_practica15.css">
+</head>
+
+<body>
+    <h1>Animación de Pelotas Rebotando</h1>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div> 
+    <div class="escenario">
+        <div class="pelota-container baloncesto-container">
+            <div class="pelota baloncesto"></div>
+            <div class="sombra"></div>
+            <p class="etiqueta">Baloncesto</p>
+        </div>
+        <div class="pelota-container futbol-container">
+            <div class="pelota futbol"></div>
+            <div class="sombra"></div>
+            <p class="etiqueta">Fútbol</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

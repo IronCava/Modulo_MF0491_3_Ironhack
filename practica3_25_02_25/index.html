@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantantes</title>
+    <link rel="stylesheet" href=css/styles_practica3.css>
+</head>
+
+<body>
+
+    <!-- Menú de navegación -->
+    <nav class="menu">
+        <nav class="menu">
+            <a href="index.html">Serrat</a>
+            <a href="anabelen.html">Ana Belén</a>
+            <a href="sabina.html">Sabina</a>
+            <a href="#">Iniciar sesión</a>
+        </nav>
+    </nav>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div> 
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Joan Manuel Serrat Teresa</h1>
+        <h3>Barcelona; 27 de diciembre de 1943</h3>
+
+        <p>
+            Conocido como Joan Manuel Serrat, es un cantante, compositor, actor,
+            escritor, poeta y guitarrista español, premiado con la Gran Cruz de
+            la Orden Civil de Alfonso X el Sabio «por su brillante carrera y su
+            contribución a la cultura y el arte españoles» y el Premio Princesa
+            de Asturias de las Artes 2024, por un "trabajo (que), de honda raíz
+            mediterránea, se aúna el arte de la poesía y la música al servicio
+            de la tolerancia, los valores compartidos, la riqueza de la
+            diversidad de lenguas y culturas, así como un necesario afán de
+            libertad."
+        </p>
+
+        <p>Web oficial: <a href="https://jmserrat.com/">Enlace</a></p>
+        <img src="img/serrat.jpg" alt="Serrat" width="500px" height="500px" />
+
+        <div class="home-button">
+            <a href="../index.html">Página principal</a>
+        </div>
+
+        <p>Dirección: Plaza 9, Barcelona</p>
+        <p>Teléfono: 666777888</p>
+        <p>Email: moises@ironhack.com</p>
+    </div>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

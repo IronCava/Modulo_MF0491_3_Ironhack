@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cantantes</title>
+    <link rel="stylesheet" href=css/styles_practica3.css>
+</head>
+
+<body>
+    <nav class="menu">
+        <nav class="menu">
+            <a href="index.html">Serrat</a>
+            <a href="#">Ana Belén</a>
+            <a href="sabina.html">Sabina</a>
+            <a href="#">Iniciar sesión</a>
+        </nav>
+    </nav>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div> 
+        <div class="container">
+            <h1>María del Pilar Cuesta Acosta - Ana Belén</h1>
+            <h3>Madrid, 27 de mayo de 1951</h3>
+            <p>
+                Es una cantante, actriz y directora española. En su larga
+                trayectoria artística de más de sesenta años, ha actuado en cuarenta
+                películas, en unas treinta obras de teatro y ha publicado más de
+                treinta y cinco discos. Ha obtenido los premios más importantes de
+                la música, el cine y el teatro. Comenzó su carrera como estrella
+                infantil en películas y programas de radio y enseguida se convirtió
+                en una celebridad. Durante su juventud fue conocida popularmente
+                como «la Novia de España» y «la Musa de la Transición». Durante los
+                años 80 cosechó numerosos éxitos en la música y en el cine,
+                uniéndose a otros artistas de la época. Desde 1972 está casada con
+                el cantautor asturiano Víctor Manuel, su pareja artística en muchas
+                ocasiones.
+            </p>
+            <p>Web oficial: <a href="https://anabelen.es/ ">Enlace</a></p>
+            <img src="img/anabelen.jpg" alt="Ana Belén" />
+
+            <p>Dirección: Plaza 9, Barcelona</p>
+            <p>Teléfono: 666777888</p>
+            <p>Email: moises@ironhack.com</p>
+        </div>
+        <script>
+            document.getElementById('volver').addEventListener('click', function (e) {
+                e.preventDefault();
+                const semana = localStorage.getItem('semanaActiva') || 0;
+                window.location.href = `../index.html`;
+            });
+        </script>
+</body>
+
+</html>

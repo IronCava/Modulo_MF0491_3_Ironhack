@@ -1,0 +1,147 @@
+/* === FONDO GALAXIA CON EFECTO DE ZOOM SUAVE === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background: black;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=1513&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  animation: galaxia 60s ease-in-out infinite;
+  z-index: -2;
+  opacity: 0.85;
+  filter: saturate(1.5) contrast(1.2) brightness(1.1);
+}
+
+@keyframes galaxia {
+  0%   { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.05) rotate(0.1deg); }
+}
+
+/* === ESTRELLAS PARPADEANTES === */
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
+  height: 80%;
+}
+
+.star {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 2s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.star:nth-child(1)  { top: 5%;  left: 10%; animation-delay: 0s; }
+.star:nth-child(2)  { top: 20%; left: 80%; animation-delay: 1s; }
+.star:nth-child(3)  { top: 40%; left: 50%; animation-delay: 2s; }
+.star:nth-child(4)  { top: 60%; left: 30%; animation-delay: 3s; }
+.star:nth-child(5)  { top: 70%; left: 70%; animation-delay: 4s; }
+.star:nth-child(6)  { top: 85%; left: 20%; animation-delay: 5s; }
+.star:nth-child(7)  { top: 90%; left: 90%; animation-delay: 6s; }
+.star:nth-child(8)  { top: 10%; left: 50%; animation-delay: 2.5s; }
+.star:nth-child(9)  { top: 45%; left: 10%; animation-delay: 1.8s; }
+.star:nth-child(10) { top: 65%; left: 90%; animation-delay: 3.6s; }
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 1; }
+}
+
+/* === TARJETA NEUMÓRFICA CON TONO GALÁCTICO === */
+.neumorphic-card {
+  background: rgba(236, 219, 235, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:
+    10px 10px 25px rgba(155, 122, 154, 0.6),
+   -5px -5px 15px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  max-width: 400px;
+  text-align: center;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+}
+
+input,
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  margin: 10px 5px;
+  font-size: 16px;
+  background: #eadbec;
+  color: #4e2c50;
+  box-shadow:
+    inset 5px 5px 10px #cdbccf,
+    inset -5px -5px 10px #ffffff;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow:
+    5px 5px 10px #cebccf,
+   -5px -5px 10px #ffffff;
+}
+
+#resultado {
+  margin-top: 20px;
+}
+
+#resultado img {
+  margin-top: 10px;
+  width: 96px;
+  height: 96px;
+}
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+  position: fixed;
+  bottom: 620px;
+  right: 120px;
+  width: 160px;
+  height: 160px;
+  background-color: #eadbec; /* igual que las secciones */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -6px -6px 20px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.home-button a {
+  color: #2c3e50; /* mismo color de texto del sitio */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.home-button:hover {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+  background-color: #ecdbe9; ; /* ligeramente más oscuro al presionar */
+}

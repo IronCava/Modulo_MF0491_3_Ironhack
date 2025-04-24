@@ -1,0 +1,131 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e8eaec;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #e8eaec;
+    padding: 30px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 
+      28px 28px 50px rgba(13, 39, 80, 0.16),   /* Drop Shadow 2 */
+     -23px -23px 45px rgba(255, 255, 255, 1);  /* Inner Light Shadow */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #0d2750;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0d2750;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e8eaec;
+    box-shadow: inset 3px 3px 6px rgba(13, 39, 80, 0.16),
+                inset -3px -3px 6px white;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e8eaec;
+    box-shadow: 5px 5px 15px rgba(13, 39, 80, 0.16),
+                -5px -5px 15px white;
+    font-weight: bold;
+    color: #0d2750;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    box-shadow: inset 2px 2px 5px rgba(13, 39, 80, 0.16),
+                inset -2px -2px 5px white;
+    cursor: pointer;
+  }
+  
+  #resultado,
+  #totalAcumulado,
+  #mensajeFinal {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0d2750;
+    text-align: center;
+  }
+  
+  #continuarPregunta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #reiniciarDiv {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+   /* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+
+.home-button {
+    position: fixed;
+    bottom: 820px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #eee7e7; /* igual que las secciones */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      12px 12px 24px rgba(0, 0, 0, 0.15),
+      -6px -6px 20px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button a {
+    color: #111112; /* mismo color de texto del sitio */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .home-button:hover {
+    box-shadow:
+      inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+      inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+    background-color: #dbe0ec; ; /* ligeramente más oscuro al presionar */
+  }
+   

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cantantes</title>
+    <link rel="stylesheet" href="css/styles_practica4.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Serrat</a></li>
+                <li><a href="anabelen.html">Ana Belén</a></li>
+                <li><a href="sabina.html">Sabina</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div> 
+    </header>
+    <!-- Contenido principal -->
+    <main class="container">
+        <article>
+            <h1>Joan Manuel Serrat Teresa</h1>
+            <h2>Barcelona; 27 de diciembre de 1943</h2>
+            <section class="bio">
+                <h2>Biografía</h2>
+                <p>
+                Es un cantautor, poeta y pintor español. Ha publicado diecisiete
+                discos de estudio y siete en directo, y ha colaborado con distintos
+                artistas cantando dúos y realizando otras colaboraciones. Los
+                álbumes en directo son grabaciones de actuaciones en las que ha
+                intervenido en solitario o junto con otros artistas: La mandrágora
+                (1981), junto a Javier Krahe y Alberto Pérez; Joaquín Sabina y
+                Viceversa en directo (1986), junto a la banda Viceversa; Enemigos
+                íntimos (1998) junto a Fito Paez; Nos sobran los motivos (2000) y
+                Dos pájaros de un tiro (2007) junto a Joan Manuel Serrat. Se estima
+                que ha vendido más de diez millones de discos y también ha compuesto
+                para otros artistas como Ana Belén, Andrés Calamaro o Miguel Ríos,
+                entre otros. En su faceta literaria ha publicado nueve libros con
+                recopilaciones de letras de canciones o poemas.
+            </p>
+        </section>
+                    <p>Web oficial: <a href="https://www.jsabina.com/">Enlace</a></p>
+            <img src="img/sabina.jpg" alt="Sabina" class="imagen-cantante">
+        </article>
+      </main>
+      <footer>
+        <address>
+            <p>📍 Plaza Cataluña, Barcelona</p>
+            <p>📞 Teléfono: +34 123 456 789</p>
+            <p>📧 Correo: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+        </address>
+    </footer>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+    </body>
+    
+    </html>
+    

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="css/styles_practica2.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Sobre mi</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="inicio_sesion.html">Inicio Sesión</a></li>
+                </ul>
+            </nav>
+            <div class="home-button">
+                <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+            </div> 
+        </header>
+
+        <main>
+            <h1>Nuestros Servicios</h1>
+
+            <section class="servicios">
+                <article class="servicio">
+                    <h2>Desarrollo Web</h2>
+                    <p>Creación de páginas web atractivas y funcionales adaptadas a tus necesidades.</p>
+                    <a href="disenoweb.html" class="btn">Ver más</a>
+                </article>
+
+                <article class="servicio">
+                    <h2>Branding</h2>
+                    <p>Desarrollo de identidad visual y estrategias de marca para destacar en el mercado.</p>
+                    <a href="branding.html" class="btn" aria-label="Más información sobre el servicio de Branding">Ver
+                        más</a>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <p>📍 Plaza Cataluña, Barcelona</p>
+                <p>📞 Teléfono: +34 123 456 789</p>
+                <p>📧 Correo: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

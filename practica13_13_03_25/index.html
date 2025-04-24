@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personajes favoritos</title>
+  <link rel="stylesheet" href="css/styles_practica13.css">
+</head>
+<body>
+  <header>
+    <h1>El Espejismo del Consumo</h1>
+    <div class="home-button">
+      <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+  </div> 
+  </header>
+  
+  <main>
+    <section class="cards-container">
+      <!-- Tarjeta 1 -->
+      <article class="card">
+        <figure>
+          <!-- Contenedor de la cara frontal (imagen + título) -->
+          <div class="front-content">
+            <img src="img/card1_a.jpg" alt="Imagen Frontal 1" class="front">
+            <h2 class="front-title">LUJO</h2>
+          </div>
+          <!-- Contenedor de la cara trasera (imagen + texto) -->
+          <div class="back-content">
+            <img src="img/card1_b.jpg" alt="Imagen Trasera 1" class="back">
+            <p class="back-text">El lujo brilla por fuera, pero explotación oculta, derroche y desigualdad, donde pocos disfrutan a costa del sacrificio de muchos</p>
+          </div>
+        </figure>
+      </article>
+      
+      <!-- Tarjeta 2 -->
+      <article class="card">
+        <figure>
+          <div class="front-content">
+            <img src="img/card2_a.jpg" alt="Imagen Frontal 2" class="front">
+            <h2 class="front-title">Brillo que engaña</h2>
+          </div>
+          <div class="back-content">
+            <img src="img/card2_b.jpg" alt="Imagen Trasera 2" class="back">
+            <p class="back-text">El resplandor del lujo oculto el costo humano y ambiental de la industria de la moda</p>
+          </div>
+        </figure>
+      </article>
+      
+      <!-- Tarjeta 3 -->
+      <article class="card">
+        <figure>
+          <div class="front-content">
+            <img src="img/card3_a.jpg" alt="Imagen Frontal 3" class="front">
+            <h2 class="front-title"> La montaña del exceso</h2>
+          </div>
+          <div class="back-content">
+            <img src="img/card3_b.jpg" alt="Imagen Trasera 3" class="back">
+            <p class="back-text">El consumismo desmedido genera montañas de productos olvidados y desperdiciados</p>
+          </div>
+        </figure>
+      </article>
+
+      <!-- Tarjeta 4 -->
+      <article class="card">
+        <figure>
+          <div class="front-content">
+            <img src="img/card4_a.jpg" alt="Imagen Frontal 4" class="front">
+            <h2 class="front-title">Esclavos del consumo</h2>
+          </div>
+          <div class="back-content">
+            <img src="img/card4_b.jpg" alt="Imagen Trasera 4" class="back">
+            <p class="back-text">Mientras algunos lucen la moda, otros viven atrapados en la maquinaria del mercado</p>
+          </div>
+        </figure>
+      </article>
+
+      <!-- Tarjeta 5 -->
+      <article class="card">
+        <figure>
+          <div class="front-content">
+            <img src="img/card5_a.jpg" alt="Imagen Frontal 5" class="front">
+            <h2 class="front-title">Lujo que divide</h2>
+          </div>
+          <div class="back-content">
+            <img src="img/card5_b.jpg" alt="Imagen Trasera 5" class="back">
+            <p class="back-text">El lujo no solo marca estatus, también profundiza la desigualdad social</p>
+          </div>
+        </figure>
+      </article>
+
+      <!-- Tarjeta 6 -->
+      <article class="card">
+        <figure>
+          <div class="front-content">
+            <img src="img/card6_a.jpg" alt="Imagen Frontal 6" class="front">
+            <h2 class="front-title">El precio del estatus</h2>
+          </div>
+          <div class="back-content">
+            <img src="img/card6_b.jpg" alt="Imagen Trasera 6" class="back">
+            <p class="back-text">Detrás de cada símbolo de poder hay largas jornadas laborales y explotación invisibilizada</p>
+          </div>
+        </figure>
+      </article>
+
+    </section>
+  </main>
+  <script>
+    document.getElementById('volver').addEventListener('click', function (e) {
+        e.preventDefault();
+        const semana = localStorage.getItem('semanaActiva') || 0;
+        window.location.href = `../index.html`;
+    });
+</script>
+</body>
+</html>

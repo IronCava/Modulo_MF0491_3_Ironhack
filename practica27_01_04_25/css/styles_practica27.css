@@ -1,0 +1,140 @@
+/* ================== ESTILOS GENERALES ================== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  min-height: 30vh; 
+}
+
+body {
+  font-family: sans-serif;
+  background: #eaeaea;
+  color: black;
+  margin: 20px;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* Inputs y botones para ambos ejercicios */
+input, button {
+  font-size: 1rem;
+  padding: 6px;
+  border: 2px solid black;
+  background: white;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+button {
+  cursor: pointer;
+  background: yellow;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 black;
+}
+
+button:hover {
+  background: red;
+  color: white;
+}
+
+/* ================== EJERCICIO 1 - Peso Ideal ================== */
+#peso-ideal {
+  background: #ffffff;
+  padding: 20px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0 black;
+  max-width: 400px;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  background: cyan;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+/* ================== EJERCICIO 2 - Entrada de Cine ================== */
+#entrada-cine {
+  margin-top: 40px;
+  max-width: 500px;
+  
+}
+
+#ticket {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 3px solid black;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: black;
+  box-shadow: 5px 5px 0 black;
+}
+
+#ticket h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: yellow;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 black;
+}
+
+#ticket p {
+  background: cyan;
+  padding: 5px;
+  margin: 8px 0;
+  border: 2px solid black;
+  display: inline-block;
+}
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' - ESTILO BRUTALISTA ================== */
+.home-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 160px;
+  height: 160px;
+  background-color: yellow; 
+  border: 6px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 6px 6px 0 black; 
+  transition: none; 
+}
+
+.home-button a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "Courier New", monospace; 
+  text-transform: uppercase;
+  display: block;
+  padding: 10px;
+}
+
+.home-button:hover {
+  background-color: black;
+  border-color: yellow;
+  box-shadow: -6px -6px 0 yellow;
+}
+
+.home-button:hover a {
+  color: white;
+}

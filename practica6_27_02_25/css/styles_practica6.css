@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ============================= VARIABLES CSS ============================= */
+:root {
+    --font-family: Arial, sans-serif;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: rgba(226, 226, 226, 0.9);
+    --menu-bg: #222;
+    --menu-hover-bg: #444;
+    --menu-active-bg: #555;
+    --link-color: #515860;
+    --link-hover-bg: #515860;
+    --heading-color: #222;
+    --subheading-color: #666;
+    --font-size-normal: 1rem;
+    --font-size-large: 2rem;
+    --font-size-medium: 1.2rem;
+    --border-radius: 0px;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    --bio-bg-image: url('../img/fondo_trayectoria copia.jpg');
+    --bio-bg-gradient: linear-gradient(rgba(244, 235, 235, 0.5), rgba(230, 220, 220, 0.8));
+    --bio-text-color: rgb(9, 9, 9);
+    --bio-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= ESTILOS GENERALES ============================= */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto 0 auto;
+    padding: 20px;
+    background-color: var(--container-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+/* ============================= BIOGRAFÍA Y FOTO ============================= */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bio {
+    background: var(--bio-bg-gradient), var(--bio-bg-image) no-repeat center center;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.bio-content {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.bio h2 {
+    color: #8B0000;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.image-container {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.imagen-cantante {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ============================= ENLACES ============================= */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--link-color);
+    margin: 10px;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: var(--link-hover-bg);
+    color: white;
+}
+
+/* ============================= TITULOS ============================= */
+h1 {
+    font-size: var(--font-size-large);
+    color: rgb(118, 6, 6);
+    margin-bottom: 10px;
+    padding: 50px;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+    color: var(--subheading-color);
+}
+
+p {
+    font-size: var(--font-size-normal);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* ============================= NAVEGACIÓN ============================= */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+    background-color: var(--menu-bg);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: var(--font-size-normal);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu a.active {
+    background-color: var(--menu-active-bg);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    background-color: var(--menu-hover-bg);
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+}
+
+/* ============================= BOTÓN 'PÁGINA PRINCIPAL' ============================= */
+.home-button {
+    position: fixed;      /* Fijo en la pantalla */
+    top: 20px;            /* Posición en la parte superior */
+    right: 20px;          /* Alineado a la derecha */
+    width: 160px;
+    height: 160px;
+    background-color: #494f91;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;        /* Asegura que esté por encima de otros elementos */
+}
+
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+/* ============================= FOOTER ============================= */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer a {
+   color: #45a049;
+}

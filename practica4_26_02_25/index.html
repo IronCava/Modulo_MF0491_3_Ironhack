@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantantes</title>
+    <link rel="stylesheet" href="css/styles_practica4.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Serrat</a></li>
+                <li><a href="anabelen.html">Ana Belén</a></li>
+                <li><a href="sabina.html">Sabina</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div> 
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Joan Manuel Serrat Teresa</h1>
+            <h2>Barcelona; 27 de diciembre de 1943</h2>
+            <section class="bio">
+                <h2>Biografía</h2>
+                <p>
+                    Conocido como Joan Manuel Serrat, es un cantante, compositor, actor,
+                    escritor, poeta y guitarrista español, premiado con la Gran Cruz de
+                    la Orden Civil de Alfonso X el Sabio «por su brillante carrera y su
+                    contribución a la cultura y el arte españoles» y el Premio Princesa
+                    de Asturias de las Artes 2024, por un "trabajo (que), de honda raíz
+                    mediterránea, se aúna el arte de la poesía y la música al servicio
+                    de la tolerancia, los valores compartidos, la riqueza de la
+                    diversidad de lenguas y culturas, así como un necesario afán de
+                    libertad."
+                </p>
+            </section>
+            <section class="info-contacto">
+                <p>Web oficial: <a href="https://jmserrat.com/">Enlace</a></p>
+                <img src="img/serrat.jpg" alt="Serrat" class="imagen-cantante">
+        </article>
+    </main>
+
+    <footer>
+        <address>
+            <p>📍 Plaza Cataluña, Barcelona</p>
+            <p>📞 Teléfono: +34 123 456 789</p>
+            <p>📧 Correo: <a href="mailto:info@gmail.com">info@gmail.com</a></p>
+        </address>
+    </footer>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>

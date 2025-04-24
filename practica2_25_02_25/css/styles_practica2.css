@@ -1,0 +1,227 @@
+/* ----- ESTRUCTURA GENERAL ----- */
+html,
+body {
+    height: 100%;
+    /* Establece que toda la página ocupe el alto completo del viewport */
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Altura mínima del viewport completo */
+}
+
+main {
+    flex: 1;
+    /* Permite que el contenido se expanda y empuje el footer hacia abajo */
+}
+
+/* ================== ESTILOS GENERALES ================== */
+
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding: 50px 0;
+    color: #45a049;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ================== MENÚ DE NAVEGACIÓN ================== */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* ================== CONTENEDOR PRINCIPAL ================== */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== IMAGEN PRINCIPAL ================== */
+.imagen-inicio img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+}
+
+/* ================== SECCIÓN DE SERVICIOS ================== */
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.servicio {
+    display: flex;
+    /* Flexbox para controlar el contenido interno */
+    flex-direction: column;
+    /* Apila el contenido en columna */
+    justify-content: space-between;
+    /* Distribuye el contenido uniformemente */
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    /* Ancho fijo para mantener la uniformidad */
+    height: 250px;
+    /* Altura fija para que todas las tarjetas tengan el mismo tamaño */
+}
+
+.servicio p {
+    flex-grow: 1;
+    /* Permite que el texto ocupe el espacio restante */
+}
+
+
+/* ================== BOTONES ================== */
+
+.btn { margin-top: auto;       /* Empuja el botón hacia abajo para que todos estén alineados */
+align-self: center;     /* Centra el botón dentro de la tarjeta */
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover,
+button:hover {
+    background: #555;
+}
+
+/* ================== MAPA ================== */
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== FORMULARIO ================== */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ================== BOTÓN 'PÁGINA PRINCIPAL' ================== */
+.home-button {
+    position: fixed;
+    bottom: 470px;
+    right: 120px;
+    width: 160px;
+    height: 160px;
+    background-color: #494f91;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.home-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+/* ================== FOOTER ================== */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+footer a {
+   color: #45a049;
+}

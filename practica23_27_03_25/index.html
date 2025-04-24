@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suma Iterativa</title>
+  <link rel="stylesheet" href="css/styles_practica23.css" />
+</head>
+<body>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div>
+  <div class="container">
+    <h1>Suma de Números</h1>
+
+    <div id="inputs">
+      <label for="num1">Número 1:</label>
+      <input type="number" id="num1" />
+
+      <label for="num2">Número 2:</label>
+      <input type="number" id="num2" />
+    </div>
+    <div class="button-group">
+        <button id="sumarBtn">Sumar</button>
+        <button id="reiniciarBtn">Reiniciar</button>
+      </div>
+      
+
+    <div id="resultado"></div>
+
+    <div id="continuarPregunta" class="hidden">
+      <p>¿Quieres continuar?</p>
+      <button id="continuarSi">Sí</button>
+      <button id="continuarNo">No</button>
+    </div>
+
+    <div id="mensajeFinal"></div>
+    <div id="totalAcumulado"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

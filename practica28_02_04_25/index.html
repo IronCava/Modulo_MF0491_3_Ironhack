@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Kalkbrenner</title>
+  <link rel="stylesheet" href="css/styles_practica28.css">
+</head>
+<body>
+  <div class="home-button">
+    <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+</div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Personaje Emergente</h1>
+      <button id="openModal">Ver más sobre Paul Kalkbrenner</button>
+    </div>
+  </div>
+
+  <!-- Ventana emergente -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Paul Kalkbrenner</h2>
+      <p>Paul Kalkbrenner es un productor de música electrónica alemán, conocido por su estilo melódico y emocional. Alcanzó fama internacional con la película "Berlin Calling", en la que también actuó.</p>
+      <p class="mensaje-final">
+        Me merezco una buena nota por haberte descubierto a este pedazo de artista.<br>
+        Disfruta del temazo, ¡aviva el espíritu!
+      </p>
+      <img src="img/paul.jpg" alt="Paul Kalkbrenner" style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <audio id="bg-audio" autoplay loop>
+    <source src="audio/Paul Kalkbrenner - Feed Your Head (Radio Edit).mp4" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entradas de cine y peso ideal</title>
+    <link rel="stylesheet" href="css/styles_practica27.css">
+</head>
+
+<body>
+    <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div>
+    <main>
+        <h1>Calculadora de Peso Ideal</h1>
+        <section id="peso-ideal">
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" step="0.01"><br><br>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" step="0.1"><br><br>
+
+            <button id="calcular-btn">Calcular Peso Ideal</button>
+
+            <div class="resultado" id="resultado"></div>
+        </section>
+        <hr>
+        <h1>Rellenar Entrada de Cine</h1>
+
+        <section id="entrada-cine">
+            <form id="formulario-ticket">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br><br>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha"><br><br>
+
+                <label for="fila">Fila:</label>
+                <input type="text" id="fila">
+
+                <label for="asiento">Asiento:</label>
+                <input type="text" id="asiento"><br><br>
+
+                <button type="button" id="btn-ticket">Enviar</button>
+            </form>
+
+            <div id="ticket">
+                <h2>🎬 Entrada de Cine</h2>
+                <p><strong>Nombre:</strong> <span id="ticket-nombre">__________</span></p>
+                <p><strong>Fecha:</strong> <span id="ticket-fecha">__/__/____</span></p>
+                <p><strong>Butaca:</strong> Fila <span id="ticket-fila">_</span>, Asiento <span
+                        id="ticket-asiento">_</span></p>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
