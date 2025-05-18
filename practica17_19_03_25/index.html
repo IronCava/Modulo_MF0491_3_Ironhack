@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_practica17.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>El Noticiero</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo_container">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo El Noticiero">
+            </a>
+        </div>
+        <nav id="navegation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="internacional.html">Internacional</a></li>
+                <li><a href="deportes.html">Deportes</a></li>
+                <li><a href="nacional.html">Nacional</a></li>
+            </ul>
+        </nav>
+        <div class="home-button">
+            <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+        </div>
+    </header>
+
+    <section id="banner">
+        <h1>Noticias de España y más allá</h1>
+    </section>
+
+
+    <main>
+        <section id="info-container">
+            <div id="info1" class="noticia">
+                <div class="noticia-imagen">
+                    <img src="img/noticia1.jpg" alt="Consejera de Emergencias">
+                </div>
+                <div class="noticia-texto">
+                    <p class="autor">Por Redacción de El Noticiero</p>
+                    <h2>La jueza imputa a la consejera de Emergencias en la dana y ofrece a Mazón declarar como
+                        investigado</h2>
+                    <p>Pradas se personará tras conocer su imputación y la del exsecretario Emilio Argüeso: “Me mantuve
+                        desde el primer minuto hasta el último, atendiendo las funciones institucionales”. El auto
+                        desmonta tesis del Gobierno valenciano.</p>
+                </div>
+            </div>
+
+            <div id="info2" class="noticia">
+                <div class="noticia-imagen">
+                    <img src="img/noticia2.jpg" alt="Bolsa Española">
+                </div>
+                <div class="noticia-texto">
+                    <p class="autor">Por Redacción de El Noticiero</p>
+                    <h2>El Nasdaq se desploma ante los temores económicos en EE.UU y arrastra a las Bolsas mundiales
+                    </h2>
+                    <p>El miedo a una recesión pasa factura a Wall Street mientras el Ibex se deja un 1,32%, aunque
+                        resiste en los 13.000 puntos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="destacadas">
+            <article class="tarjeta-noticia">
+                <img src="img/justicia.png" alt="Justicia">
+                <h4 class="categoria">Justicia</h4>
+                <h2 class="titulo">El Gobierno prevé implantar 53 plazas de jueces de violencia de género antes de fin
+                    de año</h2>
+                <p class="subtitulo">El Ministerio de Justicia propone la creación de nuevas plazas especializadas para
+                    abordar la violencia de género.</p>
+                <p class="autor">Por Redacción de Cadena SER</p>
+            </article>
+
+            <article class="tarjeta-noticia">
+                <img src="img/mano_de_cruz.png" alt="Semana Santa">
+                <h4 class="categoria">Sociedad</h4>
+                <h2 class="titulo">La Virgen de La Estrella, portada del Programa de Mano de Cruz de Guía en este año
+                    2025</h2>
+                <p class="subtitulo">La imagen de María Santísima de La Estrella protagoniza la portada del programa de
+                    Semana Santa.</p>
+                <p class="autor">Por Redacción de Radio Sevilla</p>
+            </article>
+
+            <article class="tarjeta-noticia">
+                <img src="img/fichajes.png" alt="Fichajes">
+                <h4 class="categoria">Deportes</h4>
+                <h2 class="titulo">Mercado de fichajes: última hora de Real Madrid, Barcelona, Atlético...</h2>
+                <p class="subtitulo">Actualización sobre los movimientos y rumores en el mercado de fichajes de los
+                    principales clubes españoles.</p>
+                <p class="autor">Por Redacción de Diario AS</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="pie1">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="internacional.html">Internacional</a></li>
+                <li><a href="deportes.html">Deportes</a></li>
+                <li><a href="nacional.html">Nacional</a></li>
+            </ul>
+        </div>
+
+        <div id="pie2">
+            <h3>Contacto</h3>
+            <p>Carrer de Pamplona, 96<br>Sant Martí, 08018 Barcelona<br>Teléfono: 666777888</p>
+        </div>
+
+        <div id="pie3">
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/theironhack" target="_blank">
+                <img src="img/2021_Facebook_icon.svg.png" alt="Facebook" width="40">
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('volver').addEventListener('click', function (e) {
+            e.preventDefault();
+            const semana = localStorage.getItem('semanaActiva') || 0;
+            window.location.href = `../index.html`;
+        });
+    </script>
+</body>
+
+</html>
