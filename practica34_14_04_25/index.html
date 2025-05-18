@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB Objetos JS</title>
+  <link rel="stylesheet" href="css/styles_practica34.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div class="home-button">
+        <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+    </div>
+    <h2>Ejercicio 1: Ordenador</h2>
+    <p>Tenemos el siguiente objeto ordenador. Realiza las siguientes operaciones:</p>
+  </header>
+    <section class="ejercicio">
+      <div class="botones">
+        <button onclick="mostrarFrase()">Mostrar frase descriptiva</button>
+        <button onclick="recorrerOrdenador()">Recorrer propiedades</button>
+        <button onclick="mostrarExtra()">Mostrar tercer extra</button>
+      </div>
+      <div id="resultado-ej1" class="resultado"></div>
+    </section>
+  </main>
+  <section class="ejercicio">
+    <h2>Ejercicio 2: Galletas</h2>
+    <p>Partimos de un objeto con información de unas galletas. Realiza las siguientes operaciones:</p>
+    <div class="botones">
+      <button onclick="mostrarGalletasAntes()">Mostrar objeto antes</button>
+      <button onclick="modificarGalletas()">Modificar objeto</button>
+      <button onclick="mostrarGalletasDespues()">Mostrar objeto después</button>
+      <button onclick="mostrarValores()">Mostrar solo valores</button>
+      <button onclick="mostrarClaves()">Mostrar solo claves</button>
+    </div>
+    <div id="resultado-ej2" class="resultado"></div>
+  </section>
+  <section class="ejercicio">
+    <h2>Ejercicio 3: Concesionario</h2>
+    <p>Tenemos un array de coches. Elige qué propiedad deseas mostrar:</p>
+    <div class="botones">
+      <select id="propiedadSelect">
+        <option value="marca">Marca</option>
+        <option value="modelo">Modelo</option>
+        <option value="potencia">Potencia</option>
+        <option value="precio">Precio</option>
+      </select>
+      <button onclick="mostrarCoches()">Mostrar</button>
+    </div>
+    <div id="resultado-ej3" class="resultado"></div>
+  </section>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
+

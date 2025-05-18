@@ -7,6 +7,8 @@
     <title>IDECO - Ingeniería Agroindustrial</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/cropped-favicon-192x192.png" type="image/png">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -101,7 +103,7 @@
     </nav>
     <div class="home-button">
         <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
-    </div> 
+    </div>
     <section class="about">
         <!-- COLUMNA 1: Título + Subtítulo + Botón -->
         <div class="about-col columna-1">
@@ -257,40 +259,54 @@
     5. La imagen vacía con "medio-ambiente" queda oculta inicialmente ya que no hay imagen asignada (opcional).
     -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
+        <div class="footer-wrapper">
+            <!-- Columna izquierda: logo + redes -->
+            <div class="footer-left">
                 <img src="img/logo.png" alt="IDECO Logo">
                 <p>Síguenos en las redes sociales y mantente al día de todas nuestras novedades</p>
                 <div class="social-icons">
-                    <a href="#" class="icon-facebook"></a>
-                    <a href="#" class="icon-instagram"></a>
-                    <a href="#" class="icon-linkedin"></a>
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
+
             </div>
 
-            <div class="footer-form">
-                <h3>Deja tu mensaje</h3>
+            <!-- Columna central: formulario -->
+            <div class="footer-center">
+                <div class="linea-verde"></div>
+                <h3 class="titulo-formulario">Deja tu mensaje</h3>
+                <div class="linea-verde"></div>
                 <form>
-                    <input type="text" placeholder="NOMBRE">
-                    <input type="email" placeholder="EMAIL">
-                    <input type="text" placeholder="TELÉFONO (OPCIONAL)">
-                    <input type="text" placeholder="EMPRESA (OPCIONAL)">
+                    <div class="form-row">
+                        <input type="text" placeholder="NOMBRE">
+                        <input type="email" placeholder="EMAIL">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="TELÉFONO (OPCIONAL)">
+                        <input type="text" placeholder="EMPRESA (OPCIONAL)">
+                    </div>
                     <textarea placeholder="MENSAJE"></textarea>
                     <div class="captcha">[reCAPTCHA aquí]</div>
                     <button type="submit">ENVIAR MENSAJE</button>
                 </form>
             </div>
 
-            <div class="footer-contact">
-                <p>DIRECCIÓN: CALLE SERVANDO GONZÁLEZ BECERRA, 06011 BADAJOZ</p>
-                <p>TELÉFONO: 924 255 208</p>
-                <p>EMAIL: ADMINISTRACION@IDECOET.COM</p>
+            <!-- Columna derecha: datos contacto -->
+            <div class="footer-right">
+                <p><strong>DIRECCIÓN:</strong><br>CALLE SERVANDO GONZÁLEZ BECERRA, 06011 BADAJOZ</p>
+                <p><strong>TELÉFONO:</strong><br>924 255 208</p>
+                <p><strong>EMAIL:</strong><br>ADMINISTRACION@IDECOET.COM</p>
             </div>
         </div>
-        <p>&copy; COPYRIGHT 2020 TODOS LOS DERECHOS RESERVADOS.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; COPYRIGHT 2020 TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
     </footer>
+
     <script src="js/script.js"></script>
-    
+
 </body>
 
 </html>

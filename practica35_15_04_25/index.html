@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/styles_practica35.css" />
+</head>
+<body>
+  <div class="home-button">
+    <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
+</div>
+  <div class="calculadora">
+    <div id="display">0</div>
+    <div class="teclado">
+      <!-- Fila 1 -->
+      <button class="btn" data-accion="percent">%</button>
+      <button class="btn" data-accion="ce">CE</button>
+      <button class="btn" data-accion="clear">C</button>
+      <button class="btn" data-accion="backspace">←</button>
+    
+      <!-- Fila 2 -->
+      <button class="btn" data-accion="inverse">1/x</button>
+      <button class="btn" data-accion="square">x²</button>
+      <button class="btn" data-accion="sqrt">√x</button>
+      <button class="btn operador" data-accion="divide">÷</button>
+    
+      <!-- Fila 3 -->
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operador" data-accion="multiply">×</button>
+    
+      <!-- Fila 4 -->
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operador" data-accion="subtract">−</button>
+    
+      <!-- Fila 5 -->
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operador" data-accion="add">+</button>
+    
+      <!-- Fila 6 -->
+      <button class="btn" data-accion="sign">+/-</button>
+      <button class="btn cero">0</button>
+      <button class="btn">.</button>
+      <button class="btn igual" data-accion="equals">=</button>
+    </div>    
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

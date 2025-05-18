@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrays de Arrays</title>
-  <link rel="stylesheet" href="css/styles_practica32.css">
+  <title>¡Fiesta en tu casa!</title>
+  <link rel="stylesheet" href="css/styles_practica33.css">
 </head>
+
 <body>
   <div class="home-button">
     <a href="#" id="volver" aria-label="Volver a la página principal">Página principal</a>
-</div>
+  </div>
   <div class="container">
-    <h1>Ejercicio: Arrays de Arrays</h1>
+    <h1>¡Fiesta en tu casa!: INVITADOS FIESTA ESTE FINDE</h1>
 
     <section class="enunciado">
-      <h2>Enunciado</h2>
+      <h2>Instrucciones</h2>
       <p>
-        Tienes estos dos arrays:<br>
-        <code>const medidas = [[175, 134], 165, [80, 187, [73, 26], 92]];</code><br>
-        <code>const nombres = [["Kitty", "Toby", "Didi"], ["Pedro", "José", "Roberto"], ["Carla", "Rosa", "Julieta"]];</code>
+        Montas una fiesta este finde en tu casa!
+      </p>
+      <p>Una lista de invitados ya fija en array (o bien creada mediante Prompt)
       </p>
       <ul>
-        <li>Imprimir en pantalla: el número <strong>26</strong>, <strong>134</strong> y <strong>92</strong></li>
-        <li>Imprimir en pantalla: el nombre <strong>Rosa</strong> y <strong>Roberto</strong></li>
-        <li>Imprimir en pantalla todos los nombres de mascotas:
-          <ul>
-            <li>a) en una sola línea</li>
-            <li>b) en diferentes líneas</li>
-          </ul>
-        </li>
+        <li>Te llama la Juani que se apunta con su novio Alex.</li>
+        <li>Te encuentras a Marta que dice que le cueles la tercer.</li>
+        <li>Roberto, que estaba el primero de la lista, resulta que está de viaje y no puede venir.</li>
+        <li>Hay una fiesta al lado la misma noche y toda esa gente dice que se apuntan a tu fiesta.</li>
+        <li>Muestra la lista definitiva de invitados con todos los nombres en mayúsculas.</li>
+        <li>Además, con tanto lío, acabas realizando una función de buscar, que te dice si tal persona está en la lista
+          o no.</li>
       </ul>
+      <p>A cada paso debe ir actualizando la presentación en pantalla de la lista de invitados. Tómate tu tiempo para
+        repasar todo lo visto hasta ahora. Intenta crear una página visualmente atractiva.</p>
     </section>
 
     <section class="resultados">
       <h2>Resultados</h2>
       <div id="output"></div>
+      <div class="buscar">
+        <input type="text" id="nombreBuscado" placeholder="Introduce un nombre">
+        <button id="buscarBtn">Buscar invitado</button>
+      </div>
     </section>
   </div>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>

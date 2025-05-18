@@ -1,69 +1,64 @@
-/* styles.css */
-
 body {
-  background-color: #1e1e2f;
-  color: #f1f1f1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1, h2 {
-  color: #f8ab10;
-}
-
-.enunciado {
-  background-color: #2c2c3e;
-  border-left: 5px solid #69b5cd;
+.calculadora {
+  background: white;
+  border-radius: 10px;
   padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 280px;
 }
 
-.resultados {
-  background-color: #2c2c3e;
+#display {
+  background: #222;
+  color: white;
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Escalado automático */
+  text-align: right;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
-#output {
-  margin-top: 1rem;
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
   padding: 1rem;
-  background-color: #1a1a28;
-  border: 1px solid #444;
-  border-radius: 6px;
-  white-space: pre-wrap;
-  font-family: monospace;
-}
-
-code {
-  background-color: #333;
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: #f8ab10;
-}
-
-button {
-  margin-top: 2rem;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #f8ab10;
-  color: #000;
+  font-size: 1.2rem;
   border: none;
+  background: #eee;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+
 }
 
-button:hover {
-  background-color: #f8ab10;
+.btn.operador {
+  background: #ffa500;
+  color: white;
 }
+
+.btn.igual {
+  background: #32cd32;
+  color: white;
+}
+
+.btn.cero {
+  grid-column: span 2;
+}
+
     /* ================== BOTÓN 'PÁGINA PRINCIPAL' - ESTILO BRUTALISTA ================== */
 .home-button {
     position: fixed;
